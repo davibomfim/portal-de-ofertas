@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Ofertas } from '../objects/ofertas';
+import { Router } from '@angular/router';
+import { Ofertas } from '../ofertas';
 
 @Component({
   selector: 'inicio-ofertas',
@@ -15,7 +16,8 @@ export class InicioOfertasComponent implements OnInit {
   entreterimento: any;
   responsiveOptions;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
+    
 		this.responsiveOptions = [
             {
                 breakpoint: '1024px',
@@ -57,6 +59,12 @@ export class InicioOfertasComponent implements OnInit {
       this.http.get('http://localhost:3004/ofertas?categoria.id=3').subscribe(res => {
 			this.entreterimento = res;
 		});
+    }
+
+    abrirDetalhes(oferta: Ofertas) {
+
+     this.router.navigate(['/detalhes-oferta'], {queryParams: oferta});
+        
     }
     
 

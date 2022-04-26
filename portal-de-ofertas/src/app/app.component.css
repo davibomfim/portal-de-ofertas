@@ -1,0 +1,18 @@
+.layout-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.layout-wrapper .layout-content {
+    margin-left: 250px;
+    padding-top: 70px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.layout-wrapper .layout-content .content-section {
+    padding: 2rem 4rem;
+    flex-grow: 1;
+}

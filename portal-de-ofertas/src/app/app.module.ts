@@ -15,14 +15,17 @@ import {ToastModule} from 'primeng/toast';
 import {DividerModule} from 'primeng/divider';
 import {ImageModule} from 'primeng/image';
 import {CardModule} from 'primeng/card';
+import { GalleriaModule } from 'primeng/galleria';
 import {AccordionModule} from 'primeng/accordion';
 import {MenuItem} from 'primeng/api';
+import { DetalhesOfertaComponent } from './detalhes-oferta/detalhes-oferta.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    InicioOfertasComponent
+    InicioOfertasComponent,
+    DetalhesOfertaComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import {MenuItem} from 'primeng/api';
     DividerModule,
     ImageModule,
     ToolbarModule,
-    CardModule
+    CardModule,
+    GalleriaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

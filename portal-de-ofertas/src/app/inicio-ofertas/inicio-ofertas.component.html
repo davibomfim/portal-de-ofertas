@@ -1,28 +1,16 @@
-<p-toolbar>
-    <div class="p-toolbar-group-left">
-        <i class="pi pi-bars" style="font-size: 2rem"></i>
-    </div>
-    
-    <h1>TESTE FRONT-END ANGULAR SQUADRA</h1>
-
-    <div class="p-toolbar-group-right">
-        <i class="pi pi-shopping-cart" style="font-size: 2rem"></i>
-    </div>
-</p-toolbar>
-  
 <h1>Hotéis</h1>
   <p-carousel [value]="hoteis" [numVisible]="4" [numScroll]="4" [circular]="false" [responsiveOptions]="responsiveOptions">
     <ng-template pTemplate="header">
     </ng-template>
-    <ng-template let-product pTemplate="item">
+    <ng-template let-oferta pTemplate="item">
         
-    <p-card header="{{product.titulo}}" subheader="{{product.descricaoBreve}}" [style]="{width: '300px'}" styleClass="p-card-shadow">
+    <p-card header="{{oferta.titulo}}" subheader="{{oferta.descricaoBreve}}" [style]="{width: '300px'}" styleClass="p-card-shadow">
         <ng-template pTemplate="header">
             <p-image src="assets/images/hotel.png" alt="Image" width="250"></p-image>
         </ng-template>
-        <p>R$ {{product.valor}}</p>
+        <p>R$ {{oferta.valor}}</p>
         <ng-template pTemplate="footer">
-            <p-button label="Comprar"></p-button>
+            <p-button label="Comprar" (click)="abrirDetalhes(oferta)"></p-button>
         </ng-template>
     </p-card>
     </ng-template>
@@ -34,15 +22,15 @@
 <p-carousel [value]="restaurantes" [numVisible]="4" [numScroll]="4" [circular]="false" [responsiveOptions]="responsiveOptions">
     <ng-template pTemplate="header">
     </ng-template>
-    <ng-template let-product pTemplate="item">
+    <ng-template let-oferta pTemplate="item">
         
-    <p-card header="{{product.titulo}}" subheader="{{product.descricaoBreve}}" [style]="{width: '300px'}" styleClass="p-card-shadow">
+    <p-card header="{{oferta.titulo}}" subheader="{{oferta.descricaoBreve}}" [style]="{width: '300px'}" styleClass="p-card-shadow">
         <ng-template pTemplate="header">
             <p-image src="assets/images/restaurante.png" alt="Image" width="250"></p-image>
         </ng-template>
-        <p>R$ {{product.valor}}</p>
+        <p>R$ {{oferta.valor}}</p>
         <ng-template pTemplate="footer">
-            <p-button label="Comprar"></p-button>
+            <p-button label="Comprar" (click)="abrirDetalhes(oferta)"></p-button>
         </ng-template>
     </p-card>
     </ng-template>
@@ -54,15 +42,15 @@
 <p-carousel [value]="entreterimento" [numVisible]="4" [numScroll]="4" [circular]="false" [responsiveOptions]="responsiveOptions">
     <ng-template pTemplate="header">
     </ng-template>
-    <ng-template let-product pTemplate="item">
+    <ng-template let-oferta pTemplate="item">
         
-    <p-card header="{{product.titulo}}" subheader="{{product.descricaoBreve}}" [style]="{width: '300px'}" styleClass="p-card-shadow">
+    <p-card header="{{oferta.titulo}}" subheader="{{oferta.descricaoBreve}}" [style]="{width: '300px'}" styleClass="p-card-shadow">
         <ng-template pTemplate="header">
             <p-image src="assets/images/entreterimento.png" alt="Image" width="250"></p-image>
         </ng-template>
-        <p>R$ {{product.valor}}</p>
+        <p>R$ {{oferta.valor}}</p>
         <ng-template pTemplate="footer">
-            <p-button label="Comprar"></p-button>
+            <p-button label="Comprar" (click)="abrirDetalhes(oferta)"></p-button>
         </ng-template>
     </p-card>
     </ng-template>
