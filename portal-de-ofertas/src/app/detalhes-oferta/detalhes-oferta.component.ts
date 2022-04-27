@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Ofertas } from '../ofertas';
 
 @Component({
   selector: 'detalhes-oferta',
@@ -44,11 +45,13 @@ export class DetalhesOfertaComponent implements OnInit {
     private router: Router) {
       this.route.queryParams.subscribe(params => 
         this.oferta = params);
-        console.log(this.oferta);
      }
 
   ngOnInit(): void {
-   
+  }
+
+  abrirCheckout(oferta: Ofertas){
+    this.router.navigate(['/checkout'], {queryParams: oferta});
   }
 
 }

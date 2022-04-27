@@ -5,7 +5,8 @@ import { AppComponent } from './app.component';
 import { InicioOfertasComponent } from './inicio-ofertas/inicio-ofertas.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
-import {FormsModule} from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import {CarouselModule} from 'primeng/carousel';
@@ -16,33 +17,37 @@ import {DividerModule} from 'primeng/divider';
 import {ImageModule} from 'primeng/image';
 import {CardModule} from 'primeng/card';
 import { GalleriaModule } from 'primeng/galleria';
-import {AccordionModule} from 'primeng/accordion';
-import {MenuItem} from 'primeng/api';
 import { DetalhesOfertaComponent } from './detalhes-oferta/detalhes-oferta.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { CreditCardDirectivesModule } from 'angular-cc-library';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioOfertasComponent,
-    DetalhesOfertaComponent
+    DetalhesOfertaComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
     MatIconModule,
+    MatInputModule,
     BrowserAnimationsModule,
     CarouselModule,
     ButtonModule,
     ToastModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     DividerModule,
     ImageModule,
     ToolbarModule,
     CardModule,
-    GalleriaModule
+    GalleriaModule,
+    CreditCardDirectivesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

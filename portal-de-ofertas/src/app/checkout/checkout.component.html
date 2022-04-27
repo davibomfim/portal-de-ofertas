@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row m-2">
+        <div class="col-lg-6">
+            <h1>Pagamento</h1>
+            <form [formGroup]="form">
+                <div class="row">
+                    <mat-form-field>
+                        <mat-label>Número do Cartão</mat-label>
+                        <div>
+                            <input type="tel" autocomplete="cc-number" formControlName="creditCard" matInput #input ccNumber>
+                        </div>
+                    </mat-form-field>
+                </div>
+                <div class="row">
+                    <mat-form-field>
+                        <mat-label>Nome Impresso</mat-label>
+                        <div>
+                            <input formControlName="name" matInput #input>
+                        </div>
+                    </mat-form-field>
+                </div>
+                <div class="row">
+                    <mat-form-field>
+                        <mat-label>Validade</mat-label>
+                        <div>
+                            <input type="tel" autocomplete="cc-exp" formControlName="expirationDate" matInput #input ccExp>
+                        </div>
+                    </mat-form-field>
+                </div>
+                <div class="row">
+                    <mat-form-field>
+                        <mat-label>Código de Segurança</mat-label>
+                        <div>
+                            <input type="tel" autocomplete="off" formControlName="cvc" matInput #input ccCvc>
+                        </div>
+                    </mat-form-field>
+                </div>
+                <div class="row">
+                    <p-button label="Pagar agora!" icon="pi pi-money-bill"></p-button>
+                </div>
+            </form>
+        </div>
+    
+        <div class="col-lg-2">
+            <p-divider layout="vertical"></p-divider>
+        </div>
+    
+        <div class="col-lg-4 card">
+            <p-card header="Resumo da Compra" subheader="1 x {{oferta.titulo}}" styleClass="card">
+                <h2>Total: R$ {{oferta.valor}}</h2>
+            </p-card>
+        </div>
+    </div>
+    
+</div>

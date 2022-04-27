@@ -22,7 +22,7 @@
             <p>por apenas</p>
             <h2>R$ {{oferta.valor}}</h2>
             <ng-template pTemplate="footer">
-                <p-button label="Comprar"></p-button>
+                <p-button label="Comprar" (click)="abrirCheckout(oferta)"></p-button>
             </ng-template>
         </p-card>
     </div>
