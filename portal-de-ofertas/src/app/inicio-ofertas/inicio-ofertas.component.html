@@ -1,57 +1,59 @@
-<h1>Hotéis</h1>
-  <p-carousel [value]="hoteis" [numVisible]="4" [numScroll]="4" [circular]="false" [responsiveOptions]="responsiveOptions">
-    <ng-template pTemplate="header">
-    </ng-template>
-    <ng-template let-oferta pTemplate="item">
-        
-    <p-card header="{{oferta.titulo}}" subheader="{{oferta.descricaoBreve}}" [style]="{width: '300px'}" styleClass="p-card-shadow">
-        <ng-template pTemplate="header">
-            <p-image src="assets/images/hotel.png" alt="Image" width="250"></p-image>
-        </ng-template>
-        <p>R$ {{oferta.valor}}</p>
-        <ng-template pTemplate="footer">
-            <p-button label="Comprar" (click)="abrirDetalhes(oferta)"></p-button>
-        </ng-template>
-    </p-card>
-    </ng-template>
-</p-carousel>
-
-<p-divider></p-divider>
-
-<h1>Restaurantes</h1>
-<p-carousel [value]="restaurantes" [numVisible]="4" [numScroll]="4" [circular]="false" [responsiveOptions]="responsiveOptions">
-    <ng-template pTemplate="header">
-    </ng-template>
-    <ng-template let-oferta pTemplate="item">
-        
-    <p-card header="{{oferta.titulo}}" subheader="{{oferta.descricaoBreve}}" [style]="{width: '300px'}" styleClass="p-card-shadow">
-        <ng-template pTemplate="header">
-            <p-image src="assets/images/restaurante.png" alt="Image" width="250"></p-image>
-        </ng-template>
-        <p>R$ {{oferta.valor}}</p>
-        <ng-template pTemplate="footer">
-            <p-button label="Comprar" (click)="abrirDetalhes(oferta)"></p-button>
-        </ng-template>
-    </p-card>
-    </ng-template>
-</p-carousel>
-
-<p-divider></p-divider>
-
-<h1>Entreterimento</h1>
-<p-carousel [value]="entreterimento" [numVisible]="4" [numScroll]="4" [circular]="false" [responsiveOptions]="responsiveOptions">
-    <ng-template pTemplate="header">
-    </ng-template>
-    <ng-template let-oferta pTemplate="item">
-        
-    <p-card header="{{oferta.titulo}}" subheader="{{oferta.descricaoBreve}}" [style]="{width: '300px'}" styleClass="p-card-shadow">
-        <ng-template pTemplate="header">
-            <p-image src="assets/images/entreterimento.png" alt="Image" width="250"></p-image>
-        </ng-template>
-        <p>R$ {{oferta.valor}}</p>
-        <ng-template pTemplate="footer">
-            <p-button label="Comprar" (click)="abrirDetalhes(oferta)"></p-button>
-        </ng-template>
-    </p-card>
-    </ng-template>
-</p-carousel>
+<div class="container">
+    <h1>Hotéis</h1>
+    <p-carousel [value]="hoteis" [numVisible]="3" [numScroll]="3" [circular]="false" [responsiveOptions]="responsiveOptions">
+      <ng-template pTemplate="header">
+      </ng-template>
+      <ng-template let-oferta pTemplate="item">
+          
+      <p-card header="{{oferta.titulo}}" subheader="{{oferta.descricaoBreve}}" [style]="{width: '300px'}" styleClass="p-card-shadow">
+          <ng-template pTemplate="header">
+              <p-image src="assets/images/hotel.png" alt="Image" width="250"></p-image>
+          </ng-template>
+          <p>R$ {{oferta.valor}}</p>
+          <ng-template pTemplate="footer">
+              <p-button label="Comprar" (click)="abrirDetalhes(oferta)"></p-button>
+          </ng-template>
+      </p-card>
+      </ng-template>
+  </p-carousel>
+  
+  <p-divider></p-divider>
+  
+  <h1>Restaurantes</h1>
+  <p-carousel [value]="restaurantes" [numVisible]="3" [numScroll]="3" [circular]="false" [responsiveOptions]="responsiveOptions">
+      <ng-template pTemplate="header">
+      </ng-template>
+      <ng-template let-oferta pTemplate="item">
+          
+      <p-card header="{{oferta.titulo}}" subheader="{{oferta.descricaoBreve}}" [style]="{width: '300px'}" styleClass="p-card-shadow">
+          <ng-template pTemplate="header">
+              <p-image src="assets/images/restaurante.png" alt="Image" width="250"></p-image>
+          </ng-template>
+          <p>R$ {{oferta.valor}}</p>
+          <ng-template pTemplate="footer">
+              <p-button label="Comprar" (click)="abrirDetalhes(oferta)"></p-button>
+          </ng-template>
+      </p-card>
+      </ng-template>
+  </p-carousel>
+  
+  <p-divider></p-divider>
+  
+  <h1>Entreterimento</h1>
+  <p-carousel [value]="entreterimento" [numVisible]="3" [numScroll]="3" [circular]="false" [responsiveOptions]="responsiveOptions">
+      <ng-template pTemplate="header">
+      </ng-template>
+      <ng-template let-oferta pTemplate="item">
+          
+      <p-card header="{{oferta.titulo}}" subheader="{{oferta.descricaoBreve}}" [style]="{width: '300px'}" styleClass="p-card-shadow">
+          <ng-template pTemplate="header">
+              <p-image src="assets/images/entreterimento.png" alt="Image" width="250"></p-image>
+          </ng-template>
+          <p>R$ {{oferta.valor}}</p>
+          <ng-template pTemplate="footer">
+              <p-button label="Comprar" (click)="abrirDetalhes(oferta)"></p-button>
+          </ng-template>
+      </p-card>
+      </ng-template>
+  </p-carousel>
+</div>

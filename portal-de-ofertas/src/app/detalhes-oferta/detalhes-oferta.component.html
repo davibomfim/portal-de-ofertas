@@ -1,39 +1,42 @@
-<div class="row m-2">
-    <div class="col-lg-4">
-        <p-galleria [value]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '600px'}" [numVisible]="5"
-        [circular]="true" [showItemNavigators]="true">
-        <ng-template pTemplate="item" let-item>
-            <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
-        </ng-template>
-        <ng-template pTemplate="thumbnail" let-item>
-            <div class="grid grid-nogutter justify-content-center">
-                <img [src]="item.thumbnailImageSrc" style="display: block;" />
-            </div>
-        </ng-template>
-        </p-galleria>
-    </div>
-
-    <div class="col-lg-2">
-        <p-divider layout="vertical"></p-divider>
-    </div>
-
-    <div class="col-lg-6 card">
-        <p-card header="{{oferta.titulo}}" subheader="{{oferta.descricaoBreve}}" styleClass="card">
-            <p>por apenas</p>
-            <h2>R$ {{oferta.valor}}</h2>
-            <ng-template pTemplate="footer">
-                <p-button label="Comprar" (click)="abrirCheckout(oferta)"></p-button>
+<div class="container">
+    <div class="row m-2">
+        <div class="col-lg-4">
+            <p-galleria [value]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '600px'}" [numVisible]="5"
+            [circular]="true" [showItemNavigators]="true">
+            <ng-template pTemplate="item" let-item>
+                <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
             </ng-template>
-        </p-card>
+            <ng-template pTemplate="thumbnail" let-item>
+                <div class="grid grid-nogutter justify-content-center">
+                    <img [src]="item.thumbnailImageSrc" style="display: block;" />
+                </div>
+            </ng-template>
+            </p-galleria>
+        </div>
+    
+        <div class="col-lg-2">
+            <p-divider layout="vertical"></p-divider>
+        </div>
+    
+        <div class="col-lg-6 card">
+            <p-card header="{{oferta.titulo}}" subheader="{{oferta.descricaoBreve}}" styleClass="card">
+                <p>por apenas</p>
+                <h2>R$ {{oferta.valor}}</h2>
+                <ng-template pTemplate="footer">
+                    <p-button label="Comprar" (click)="abrirCheckout(oferta)"></p-button>
+                </ng-template>
+            </p-card>
+        </div>
     </div>
-</div>
-
-<div class="row m-2">
-    <h1>Detalhes da oferta</h1>
-    <p>{{oferta.detalhes}}</p>
-</div>
-
-<div class="row m-2">
-    <h1>Destaques da oferta</h1>
-    <p>{{oferta.destaques}}</p>
+    
+    <div class="row m-2">
+        <h1>Detalhes da oferta</h1>
+        <p>{{oferta.detalhes}}</p>
+    </div>
+    
+    <div class="row m-2">
+        <h1>Destaques da oferta</h1>
+        <p>{{oferta.destaques}}</p>
+    </div>
+    
 </div>
